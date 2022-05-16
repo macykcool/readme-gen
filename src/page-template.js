@@ -4,6 +4,8 @@
 // Description, Table of Contents, Installation, Usage, License, 
 // Contributing, Tests, and Questions
 
+
+//if optional fields are excluded, this will not generate the excluded fields
 const  generateInstall = installInput => {
     if (!installInput) {
         return '';
@@ -48,6 +50,8 @@ const  generateTest = installTest => {
 };
 console.log(generateTest);
 
+
+//languages .. need to figure out how to list these if more than one selected
 const  generateBuilt = installBuilt => {
     if (!installBuilt) {
         return '';
@@ -58,3 +62,57 @@ const  generateBuilt = installBuilt => {
     `
 };
 console.log(generateBuilt);
+
+//email will be for the questions section
+//questions will have the Github username, email is optional
+const  generateEmail = installEmail => {
+    if (!installEmail) {
+        return '';
+    }
+    return `
+    ## Questions
+    ${installEmail}   
+    Please contact me for more information @ ${email}
+    `
+};
+console.log(generateEmail);
+
+//
+
+const generateReadme = installReadme => {
+    if (!installReadme) {
+        return '';
+    }
+    return `
+## ${title}   
+
+## Description 
+${description}
+
+## Installation Instructions  EXCLUDE
+${install}
+
+## Usage    EXCLUDE
+${usage}
+
+## Contributions    EXCLUDE
+${cont}
+
+##Tests   EXCLUDE
+${test}
+
+##Built With   
+${languages}
+
+##Licenses
+${license}
+
+##Questions
+Please contact me for more information @ ${email}   EXCLUDE
+or visit link to github ${github}
+
+
+
+    `
+};
+console.log(generateReadme);

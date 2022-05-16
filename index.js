@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
 const generateMarkdown = require('./utils/generateMarkdown.js')
 const generatePage = require('./src/page-template');
 
@@ -9,6 +10,8 @@ const generatePage = require('./src/page-template');
 const questions = () => {
   
     return inquirer.prompt([
+
+        //name required
     {
     type: 'input',
     name: 'name',
@@ -39,7 +42,7 @@ const questions = () => {
       //title required
   {
     type: 'input',
-    name: 'Project Title',
+    name: 'title',
     message: 'Title of this project:',
     validate: nameInput => {
       if (nameInput) {
@@ -53,7 +56,7 @@ const questions = () => {
           //description required
   {
       type: 'input',
-      name: 'Project Description',
+      name: 'description',
       message: 'Provide a description of this project:',
       validate: nameInput => {
           if (nameInput) {
@@ -64,26 +67,26 @@ const questions = () => {
           }
         }
     },
-    //install, usage, conrtibutions, language, ASK FOR THESE TOO 
+    //install, usage, conrtibutions, language, languages make confirms
     {
       type: 'input',
-      name: 'Installation',
+      name: 'install',
       message: 'Provide instructions for installing:'
     },   
    {
       type: 'input',
-      name: 'Usage',
+      name: 'usage',
       message: 'Describe the usage of this project:'
     },
     {
       type: 'input',
-      name: 'Contributions',
+      name: 'cont',
       message: 'Who contributed to this project?'
     },
-          //test optional add a file on how to run tests
+        
     {
       type: 'input',
-      name: 'Test Instructions',
+      name: 'test',
       message: 'How was this project tested?'
     },
     {
@@ -96,7 +99,7 @@ const questions = () => {
       //license required
   {
     type: 'checkbox',
-    name: 'License',
+    name: 'license',
     message: 'Please select a license or licenses for this project',
     choices: ['Apache 2.0', 'Mozilla Public', 'MIT', 'Boost Software 1.0', 'The Unilicense ']
     // validate: nameInput => {
