@@ -208,7 +208,7 @@ function writeToFile(fileName, data) {
 inquirer.prompt(promptUser)
 .then(function (userInput) {
   console.log(userInput)
-  writeToFile("README.md", generateMarkdown(userInput));
+  writeToFile("./dist/README.md", generateMarkdown(userInput));
 });
  };
 

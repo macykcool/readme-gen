@@ -1,41 +1,35 @@
+# README-Generator
 
-# cows   
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-## Description 
-cows
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Table of Contents
 
-## Installation Instructions  ex
-undefined
+## Description
 
-## Usage    EXCLUDE
-cows
+## Installation Instructions  
 
-## Contributions   
-cows
+## Purpose
+Build a high quality README.md generator from the command line
 
-## License  
-Apache 2.0
-(https://opensource.org/licenses/Apache-2.0)
+## Process
 
+## Github Repository
+https://github.com/macykcool/readme-gen
 
+## Screencastify 
+<!-- ![readme generator demo](./gif/abc.gif) -->
 
-## Badges
+## Built With
+- Markdown
+- Javascript
+- NPM 
+- Inquirer
+- node.JS
+- ES6
 
+## Contribution
+- Made with ❤️️ by Macy Mannix
+- Mentored by UC Davis Full Stack Web Developer Bootcamp
 
-## Tests   EXCLUDE
-cows
-
-## Built With   
-JavaScript
-
-## Made with ❤️️ by macy
-
-## Questions
-Please contact me for more information @ <macykcool@gmail.com> 
-or visit link to github [GitHub](https://github.com/macy)
-
-
-// 
+## License
+- MIT
+- (https://opensource.org/licenses/MIT)
