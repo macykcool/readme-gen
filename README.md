@@ -1,24 +1,24 @@
 
-# I love Hector   
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# cows   
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description 
-hector rocks
+cows
 
 ## Table of Contents
 
 ## Installation Instructions  ex
-ok
+undefined
 
 ## Usage    EXCLUDE
-kind
+cows
 
 ## Contributions   
-page
+cows
 
 ## License  
-MIT
-https://opensource.org/licenses/MIT)
+Apache 2.0
+(https://opensource.org/licenses/Apache-2.0)
 
 
 
@@ -26,16 +26,16 @@ https://opensource.org/licenses/MIT)
 
 
 ## Tests   EXCLUDE
-no
+cows
 
 ## Built With   
 JavaScript
 
-## Made with ❤️️ by hector
+## Made with ❤️️ by macy
 
 ## Questions
-Please contact me for more information @ macy 
-or visit link to github hectorkcool
+Please contact me for more information @ <macykcool@gmail.com> 
+or visit link to github [GitHub](https://github.com/macy)
 
 
 // 

@@ -29,7 +29,7 @@ function renderLicenseLink(license) {
         return `(https://opensource.org/licenses/MPL-2.0)`
     }
     if (license == 'MIT'){
-        return `https://opensource.org/licenses/MIT)`
+        return `(https://opensource.org/licenses/MIT)`
     }
     if (license == 'Boost Software 1.0'){
         return `(https://www.boost.org/LICENSE_1_0.txt)`
@@ -85,8 +85,8 @@ ${data.languages}
 ## Made with ❤️️ by ${data.name}
 
 ## Questions
-Please contact me for more information @ ${data.email} 
-or visit link to github ${data.github}
+Please contact me for more information @ <${data.email}> 
+or visit link to github [GitHub](https://github.com/${data.github})
 
 
 // `;
