@@ -67,28 +67,84 @@ const questions = () => {
           }
         }
     },
-    //install, usage, conrtibutions, language, languages make confirms
+    //install, usage, contributions, testing, language
+
+    {
+      type: 'confirm',
+      name: 'confirmInstall',
+      message: 'Would you like to add installation instructions?',
+      default: true
+    },
     {
       type: 'input',
       name: 'install',
-      message: 'Provide instructions for installing:'
+      message: 'Provide instructions for installing:',
+      when: ({ confirmInstall }) => {
+        if (confirmInstall) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     },   
+    {
+      type: 'confirm',
+      name: 'confirmUsage',
+      message: 'Would you like to add information on usage?',
+      default: true
+    },
+
    {
       type: 'input',
       name: 'usage',
-      message: 'Describe the usage of this project:'
-    },
+      message: 'Describe the usage of this project:',
+      when: ({ confirmUsage }) => {
+        if (confirmUsage) {
+          return true;
+        } else {
+          return false;
+        }
+    }
+  },
+
+  {
+    type: 'confirm',
+    name: 'confirmCont',
+    message: 'Would you like to add information about contributions?',
+    default: true
+  },
     {
       type: 'input',
       name: 'cont',
-      message: 'Who contributed to this project?'
+      message: 'Who contributed to this project?',
+      when: ({ confirmCont }) => {
+        if (confirmCont) {
+          return true;
+        } else {
+          return false;
+        }
+    }
     },
-        
+    {
+      type: 'confirm',
+      name: 'confirmTest',
+      message: 'Would you like to add information about testing?',
+      default: true
+    },
     {
       type: 'input',
       name: 'test',
-      message: 'How was this project tested?'
-    },
+      message: 'How was this project tested?', 
+      when: ({ confirmTest }) => {
+        if (confirmTest) {
+          return true;
+        } else {
+          return false;
+        }
+    }
+  },
+
+
     {
       type: 'checkbox',
       name: 'languages',
@@ -112,19 +168,14 @@ const questions = () => {
     //   }
   },
 
-    //questions for contact ask if email
-    {
-      type: 'confirm',
-      name: 'confirmEmail',
-      message: 'Would you like to provide your email so people can contact you about this project?',
-      default: true
-      },
+    //questions for contact email
+    
     {
       type: 'input',
       name: 'email',
       message: 'Enter your email address:',
-      when: ({ confirmEmail }) => {
-        if (confirmEmail) {
+      validate: emailInput => {
+        if (emailInput) {
           return true;
         } else {
           console.log('Please enter your email address!');

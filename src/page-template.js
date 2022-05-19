@@ -17,6 +17,8 @@ const  generateInstall = installInput => {
 };
 console.log(generateInstall);
 
+
+
 const  generateUsage = installUsage => {
     if (!installUsage) {
         return '';
@@ -63,21 +65,7 @@ const  generateBuilt = installBuilt => {
 };
 console.log(generateBuilt);
 
-//email will be for the questions section
-//questions will have the Github username, email is optional
-const  generateEmail = installEmail => {
-    if (!installEmail) {
-        return '';
-    }
-    return `
-    ## Questions
-    ${installEmail}   
-    Please contact me for more information @ ${email}
-    `
-};
-console.log(generateEmail);
 
-//
 
 const generateReadme = installReadme => {
     if (!installReadme) {
@@ -95,7 +83,7 @@ ${install}
 ## Usage    EXCLUDE
 ${usage}
 
-## Contributions    EXCLUDE
+## Contributions   
 ${cont}
 
 ##Tests   EXCLUDE
@@ -104,14 +92,15 @@ ${test}
 ##Built With   
 ${languages}
 
-##Licenses
+##Licenses MANDATORY
 ${license}
 
+
+## Made with ❤️️ by ${name}
+
 ##Questions
-Please contact me for more information @ ${email}   EXCLUDE
+Please contact me for more information @ ${email} 
 or visit link to github ${github}
-
-
 
     `
 };
