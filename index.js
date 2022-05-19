@@ -156,7 +156,7 @@ default: true
 type: 'checkbox',
 name: 'license',
 message: 'Please select a license or licenses for this project',
-choices: ['Apache 2.0', 'Mozilla Public', 'MIT', 'Boost Software 1.0', 'The Unilicense ']
+choices: ['Apache 2.0', 'Mozilla Public', 'MIT', 'Boost Software 1.0', 'The Unilicense']
 // validate: nameInput => {
 //     if (nameInput) {
 //       return true;
