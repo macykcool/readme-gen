@@ -57,96 +57,37 @@ function renderLicenseSection(license) {
 
 
 
-// //if optional fields are excluded, this will not generate the excluded fields
-
-
-// const  generateInstall = installInput => {
-//     if (!installInput) {
-//         return '';
-//     }
-//     return `
-//     ## Installation
-//     ${installInput}
-//     `
-// };
-// console.log(generateInstall);
-
-
-
-// const  generateUsage = installUsage => {
-//     if (!installUsage) {
-//         return '';
-//     }
-//     return `
-//     ## Usage
-//     ${installUsage}   
-//     `
-// };
-// console.log(generateUsage);
-
-// const  generateTest = installTest => {
-//     if (!installTest) {
-//         return '';
-//     }
-//     return `
-//     ## Tests
-//     ${installTest}   
-//     `
-// };
-// console.log(generateTest);
-
-// const  generateContributions = installContributions => {
-//     if (!installContributions) {
-//         return '';
-//     }
-//     return `
-//     ## Contribution
-//     ${installContributions}   
-//     `
-// };
-// console.log(generateContributions);
-
-
-// //languages .. need to figure out how to list these if more than one selected
-// const  generateBuilt = installBuilt => {
-//     if (!installBuilt) {
-//         return '';
-//     }
-//     return `
-//     ## Built with
-//     ${installBuilt}   
-//     `
-// };
-// console.log(generateBuilt);
-
-
-
 // // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data)  {
   return `
 # ${data.title}   
 
 ${renderLicenseBadge(data.license)}
-
 ## Table of Contents
 
 ## Description 
 ${data.description}
 
-## Installation Instructions  ex
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
+
+## Installation Instructions 
 ${data.install}
 
-## Usage    EXCLUDE
+## Usage  
 ${data.usage}
-
-## Tests   EXCLUDE
-${data.test}
 
 ## Contributions   
 ${data.cont}
 
-## Built With   
-${data.languages}
+## Tests  
+${data.test}
 
 ## License  
 ${renderLicenseSection(data.license)}
